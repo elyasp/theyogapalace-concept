@@ -2,8 +2,9 @@ import styled, { createGlobalStyle, css } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
   body {
+    overflow-x: hidden;
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    font-family: "Assistant", 'Segoe UI', 'Roboto', 'Oxygen',
         'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
         sans-serif;
     -webkit-font-smoothing: antialiased;
@@ -21,12 +22,26 @@ const breakpoints = {
   xxl: 1525,
 };
 
-export const media = Object.entries(breakpoints).reduce(
+export const mediaUntil = Object.entries(breakpoints).reduce(
   (acc, [label, size]) => {
     return {
       ...acc,
       [label]: (breakpointCss) => css`
         @media (max-width: ${size}px) {
+          ${breakpointCss}
+        }
+      `,
+    };
+  },
+  {}
+);
+
+export const mediaFrom = Object.entries(breakpoints).reduce(
+  (acc, [label, size]) => {
+    return {
+      ...acc,
+      [label]: (breakpointCss) => css`
+        @media (min-width: ${size}px) {
           ${breakpointCss}
         }
       `,

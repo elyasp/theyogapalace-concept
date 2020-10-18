@@ -1,10 +1,15 @@
 import React from "react";
-import { NavBar } from "../components";
+import Fade from "react-reveal/Fade";
+import { NavBar, MainPage } from "../components";
 
 export const Landing = () => {
   return (
     <>
-      <div>Landing page</div>
+      <div>
+        {/* <Fade duration={2000}> */}
+        <MainPage />
+        {/* </Fade> */}
+      </div>
     </>
   );
 };

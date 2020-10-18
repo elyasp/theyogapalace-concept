@@ -1,5 +1,13 @@
 import React from "react";
+import { ProductPage } from "../components";
 
 export const Programs = () => {
-  return <div>Programs</div>;
+  return (
+    <>
+      <ProductPage />
+      <ProductPage />
+      <ProductPage />
+      <ProductPage />
+    </>
+  );
 };
