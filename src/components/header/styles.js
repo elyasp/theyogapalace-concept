@@ -15,7 +15,6 @@ const navbarAnimation = keyframes`
 `;
 
 export const Header = styled.header`
-  border: solid 3px blue;
   ${({ isScrolled }) =>
     isScrolled &&
     css`
@@ -37,7 +36,6 @@ export const Header = styled.header`
 `;
 
 export const Nav = styled.nav`
-  border: solid 3px red;
   width: 1000px;
   height: 90px;
   display: flex;
