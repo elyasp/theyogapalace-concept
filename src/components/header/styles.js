@@ -1,20 +1,44 @@
-import styled from "styled-components";
+import styled, { css, keyframes } from "styled-components";
 import { Link } from "react-router-dom";
 import { mediaUntil, mediaFrom } from "../../styles/styles";
 
+const navbarAnimation = keyframes`
+  0% {
+      top: -30px;
+  }
+  50% {
+      top: -15px;
+  }
+  100% {
+      top: 0px;
+  }
+`;
+
 export const Header = styled.header`
+  border: solid 3px blue;
+  ${({ isScrolled }) =>
+    isScrolled &&
+    css`
+      animation: 0.3s ${navbarAnimation} ease;
+    `}
+
+  background-color: ${({ isScrolled }) =>
+    isScrolled ? "rgba(2, 0, 102, 0.7)" : "hsla(27, 100%, 1%, 0.45)"};
+  /* position: ${({ isScrolled }) => (isScrolled ? "fixed" : "absolute")}; */
+
   display: flex;
+  flex-direction: column;
   align-items: center;
   top: 0;
   left: 0;
   z-index: 2;
-  width: 100%;
-  background: #d3dede;
+  background: white;
   border-bottom: solid black 2px;
 `;
 
 export const Nav = styled.nav`
-  width: 1100px;
+  border: solid 3px red;
+  width: 1000px;
   height: 90px;
   display: flex;
   justify-content: space-between;
@@ -23,7 +47,8 @@ export const Nav = styled.nav`
   padding: 0 2em;
 
   ${mediaUntil.md(`
-    justify-content: flex-end;
+    justify-content: space-between;
+    width: -webkit-fill-available;
   `)}
 `;
 
@@ -49,10 +74,10 @@ export const NavLink = styled(Link)`
   text-transform: uppercase;
   color: black;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 1.2px;
   margin: 15px;
-  opacity: 0.8;
+  opacity: 0.6;
   transition: opacity 0.3s ease;
 
   ${mediaUntil.md(`
@@ -61,12 +86,14 @@ export const NavLink = styled(Link)`
 
   &:hover {
     opacity: 1;
-    /* text-decoration: underline; */
+    border-bottom: solid 2px #1793ff;
+    border-top: solid 2px #1793ff;
+    /* transition: all 1s ease; */
   }
 
   :last-child {
     font-weight: 600;
-    border: solid black 1px;
+    border: solid #1793ff 1px;
     padding: 5px 10px;
     border-radius: 4px;
 
@@ -76,7 +103,7 @@ export const NavLink = styled(Link)`
 
     &:hover {
       color: white;
-      background-color: black;
+      background-color: #1793ff;
       transition: background-color 0.5s ease;
     }
   }
@@ -94,4 +121,14 @@ export const BurgerWrap = styled.div`
   display: none;
   position: fixed;
   width: fit-content;
+`;
+
+export const Banner = styled.div`
+  display: grid;
+  place-items: center;
+  background: black;
+  color: white;
+  height: 2em;
+  letter-spacing: 0.7px;
+  width: 100%;
 `;

@@ -26,9 +26,17 @@ export const StyledMenu = styled.nav`
 `;
 
 export const StyledBurger = styled.button`
+  ${mediaUntil.md(`
+  visibility: initial;
+    `)}
+
+  visibility: hidden;
   position: fixed;
+  width: fit-content;
+
+  /* position: relative;
   top: 2em;
-  left: 2rem;
+  left: 2rem; */
   display: flex;
   flex-direction: column;
   justify-content: space-around;
