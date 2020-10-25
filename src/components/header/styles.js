@@ -4,15 +4,18 @@ import { mediaUntil, mediaFrom } from "../../styles/styles";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import { Nav, Navbar } from "react-bootstrap";
 
-const navbarAnimation = keyframes`
+const slideIn = keyframes`
   0% {
-      top: -30px;
-  }
-  50% {
-      top: -15px;
+    transform: translateY(1rem);
+    opacity: 0;
   }
   100% {
-      top: 0px;
+    transform:translateY(0rem);
+    opacity: 1;
+  }
+  0% {
+    transform: translateY(1rem);
+    opacity: 0;
   }
 `;
 
@@ -34,54 +37,17 @@ export const StyledDropdown = styled(NavDropdown)`
   font-weight: 600;
   letter-spacing: 1.2px;
   margin: 15px;
-  opacity: 0.6;
+  transform: translateY(-100);
   transition: all 0.3s ease;
 
-  ${mediaUntil.md(`
-    color: white;
-  `)}
+  div {
+    animation-name: ${slideIn};
+    animation-duration: 0.5s;
+  }
 
   &:hover {
-    opacity: 1;
-    /* transition: all 1s ease; */
   }
 `;
-
-// export const Header = styled.header`
-//   ${({ isScrolled }) =>
-//     isScrolled &&
-//     css`
-//       animation: 0.3s ${navbarAnimation} ease;
-//     `}
-
-//   background-color: ${({ isScrolled }) =>
-//     isScrolled ? "rgba(2, 0, 102, 0.7)" : "hsla(27, 100%, 1%, 0.45)"};
-//   /* position: ${({ isScrolled }) => (isScrolled ? "fixed" : "absolute")}; */
-
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   top: 0;
-//   left: 0;
-//   z-index: 2;
-//   background: white;
-//   border-bottom: solid black 2px;
-// `;
-
-// export const StyledNav = styled.nav`
-//   width: 1000px;
-//   height: 90px;
-//   display: flex;
-//   justify-content: space-between;
-//   align-items: center;
-//   margin: 0 auto;
-//   padding: 0 2em;
-
-//   ${mediaUntil.md(`
-//     justify-content: space-between;
-//     width: -webkit-fill-available;
-//   `)}
-// `;
 
 export const IconComponent = styled.div`
   display: flex;
@@ -112,21 +78,17 @@ export const StyledLink = styled(Link)`
   opacity: 0.6;
   transition: opacity 0.3s ease;
 
-  /* ${mediaUntil.md(`
-    color: white;
-  `)} */
-
   &:hover {
     color: black;
     opacity: 1;
-    border-bottom: solid 2px #1793ff;
-    border-top: solid 2px #1793ff;
+    border-bottom: solid 2px #005059;
+    border-top: solid 2px #005059;
     text-decoration-line: none;
   }
 
   :last-child {
     font-weight: 600;
-    border: solid #1793ff 1px;
+    border: solid #005059 2px;
     padding: 5px 10px;
     border-radius: 4px;
 
@@ -136,7 +98,7 @@ export const StyledLink = styled(Link)`
 
     &:hover {
       color: white;
-      background-color: #1793ff;
+      background-color: #005059;
       transition: background-color 0.5s ease;
     }
   }
@@ -156,12 +118,17 @@ export const BurgerWrap = styled.div`
   width: fit-content;
 `;
 
-// export const Banner = styled.div`
-//   display: grid;
-//   place-items: center;
-//   background: black;
-//   color: white;
-//   height: 2em;
-//   letter-spacing: 0.7px;
-//   width: 100%;
-// `;
+export const Banner = styled.div`
+  display: grid;
+  place-items: center;
+  background: black;
+  color: white;
+  height: 2em;
+  letter-spacing: 0.7px;
+  width: 100%;
+  text-transform: uppercase;
+
+  ${mediaUntil.md(`
+     font-size: 0.6em;
+  `)}
+`;
