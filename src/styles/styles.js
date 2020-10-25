@@ -1,10 +1,21 @@
 import styled, { createGlobalStyle, css } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
+
+@font-face {
+     font-family: 'AvenirBold';
+     src: url('../fonts/AvenirNextLTPro-Bold.woff');
+  }
+
+@font-face {
+     font-family: 'Avenir';
+     src: url('../fonts/AvenirNextLTPro-Regular.woff');
+  }
+
   body {
     overflow-x: hidden;
     margin: 0;
-    font-family: "Assistant", 'Segoe UI', 'Roboto', 'Oxygen',
+    font-family: "Avenir", 'Segoe UI', 'Roboto', 'Oxygen',
         'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
         sans-serif;
     -webkit-font-smoothing: antialiased;

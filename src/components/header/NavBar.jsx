@@ -1,64 +1,100 @@
 import React, { useState, useRef, useEffect } from "react";
+import { Nav, Navbar } from "react-bootstrap";
 import { BurgerButton, BurgerMenu } from "../hamburgerMenu";
 import { Link } from "react-router-dom";
 import {
   Header,
-  Nav,
   NavList,
-  NavLink,
+  StyledLink,
   YogaLogo,
   IconComponent,
   BurgerWrap,
   Banner,
+  StyledDropdown,
+  StyledNav,
 } from "./styles";
 import yogaLogo from "../../images/openeyecon.svg";
 
 export const NavBar = () => {
-  const [open, setOpen] = useState(false);
-  const node = useRef();
-  const [isScrolled, setIsScrolled] = useState(false);
+  // const [open, setOpen] = useState(false);
+  // const node = useRef();
+  // const [isScrolled, setIsScrolled] = useState(false);
 
-  const handleScroll = () => {
-    if (window.pageYOffset > 5) {
-      setIsScrolled(true);
-    } else {
-      setIsScrolled(false);
-    }
-  };
+  // const handleScroll = () => {
+  //   if (window.pageYOffset > 5) {
+  //     setIsScrolled(true);
+  //   } else {
+  //     setIsScrolled(false);
+  //   }
+  // };
 
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
+  // useEffect(() => {
+  //   window.addEventListener("scroll", handleScroll);
 
-    return () => window.removeEventListener("scroll", handleScroll);
-  });
+  //   return () => window.removeEventListener("scroll", handleScroll);
+  // });
 
-  console.log(isScrolled);
+  // console.log(isScrolled);
 
   return (
     <>
-      <Header isScrolled={isScrolled}>
+      <Navbar
+        collapseOnSelect
+        expand="lg"
+        bg="light"
+        variant="light"
+        sticky="top"
+      >
+        <Link to="/">
+          <IconComponent>
+            <YogaLogo src={yogaLogo} alt="jivamukti-logo.svg" />
+          </IconComponent>
+        </Link>
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Collapse id="responsive-navbar-nav">
+          <StyledNav className="mr-auto">
+            <StyledLink to="/">Home</StyledLink>
+            <StyledLink to="/programs">TYP Mentoring Series</StyledLink>
+            <StyledLink to="/about">Palacesophy</StyledLink>
+            <StyledDropdown
+              title="PAlace Dropdown"
+              id="collasible-nav-dropdown"
+            >
+              <StyledDropdown.Item href="#action/3.1">
+                Who is Dr. G?
+              </StyledDropdown.Item>
+              <StyledDropdown.Item href="#action/3.2">
+                Our Palace
+              </StyledDropdown.Item>
+              <StyledDropdown.Item href="#action/3.3">
+                Our Mission
+              </StyledDropdown.Item>
+              <StyledDropdown.Divider />
+              <StyledDropdown.Item href="#action/3.4">
+                <Link to="/contact">Apply Here</Link>
+              </StyledDropdown.Item>
+            </StyledDropdown>
+            <StyledLink to="/contact">APPLY NOW</StyledLink>
+          </StyledNav>
+        </Navbar.Collapse>
+      </Navbar>
+
+      {/* <Header isScrolled={isScrolled}>
         <Banner>TRAINING PLATFORM COMING SOON!</Banner>
         <BurgerMenu ref={node} open={open} setOpen={setOpen} />
         <Nav>
-          {/* <BurgerWrap > */}
           <div>
             <BurgerButton ref={node} open={open} setOpen={setOpen} />
-            {/* </BurgerWrap> */}
+
             <Link to="/">
               <IconComponent>
                 <YogaLogo src={yogaLogo} alt="jivamukti-logo.svg" />
-                {/* <span>The Yoga Palace</span> */}
               </IconComponent>
             </Link>
           </div>
-          <NavList>
-            <NavLink to="/">Home</NavLink>
-            <NavLink to="/programs">masterclass</NavLink>
-            <NavLink to="/about">Palacesophy</NavLink>
-            <NavLink to="/contact">APPLY NOW</NavLink>
-          </NavList>
+         
         </Nav>
-      </Header>
+      </Header> */}
     </>
   );
 };

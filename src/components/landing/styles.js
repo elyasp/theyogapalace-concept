@@ -1,28 +1,29 @@
 import styled from "styled-components";
 import TextLoop from "react-text-loop";
 import { Link } from "react-router-dom";
-import landingImage from "../../images/landingimage.jpg";
+import waveUp from "../../images/yoga.svg";
+import waveDown from "../../images/yogaUnder.svg";
 import responsiveLandingImage from "../../images/responsive-lotus.jpg";
 import { mediaUntil, mediaFrom, LayeredBoxShadow } from "../../styles/styles";
 
 export const Background = styled.div`
-  display: grid;
-  place-items: center;
-  background-image: url(${landingImage});
-  background-size: contain;
+  display: flex;
+  justify-content: center;
+  background-image: url(${waveUp});
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-color: #e7edf3;
+  background-color: #005059;
   width: 100%;
-  height: 400px;
+  height: 70vh;
 
-  box-shadow: 152px 12px 167px -46px rgba(0, 25, 28, 0.1) inset;
+  /* box-shadow: 152px 12px 167px -46px rgba(0, 25, 28, 0.1) inset; */
 
-  ${mediaUntil.lg(`
+  /* ${mediaUntil.lg(`
     background-image: url(${responsiveLandingImage});
     box-shadow: 7px 77px 164px -47px rgba(5, 54, 60, 0.1) inset;
 
-  `)}
+  `)} */
 `;
 
 export const Intro = styled.div`
@@ -33,12 +34,12 @@ export const Intro = styled.div`
         align-items: center;
         justify-content: space-around;
 `)}
-  padding: 1em;
-  width: 65vw;
+  /* padding: 1em; */
+  /* width: 65vw; */
 
   h1 {
     font-weight: 600;
-    color: black;
+    color: #fe9a84;
 
     ${mediaFrom.md(`
         font-size: 5em;
@@ -46,12 +47,21 @@ export const Intro = styled.div`
   }
 `;
 
-export const StyledTextLoop = styled(TextLoop)``;
+export const StyledContainer = styled.section`
+  background-image: url(${waveDown});
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+`;
+
+export const StyledTextLoop = styled(TextLoop)`
+  color: #fe9a84;
+`;
 
 export const StyledPromotion = styled.div`
   span {
     :first-child {
-      font-weight: 300;
+      font-weight: 500;
     }
     font-size: 1em;
   }
@@ -122,4 +132,8 @@ export const SaleLink = styled(Link)`
     background: #0064de;
     transition: all 0.5s ease;
   }
+`;
+
+export const PageImage = styled.img`
+  max-height: 700px;
 `;
