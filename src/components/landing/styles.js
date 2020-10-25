@@ -3,7 +3,6 @@ import TextLoop from "react-text-loop";
 import { Link } from "react-router-dom";
 import waveUp from "../../images/waveUp.svg";
 import waveDown from "../../images/waveDown.svg";
-import responsiveLandingImage from "../../images/responsive-lotus.jpg";
 import { mediaUntil, mediaFrom, LayeredBoxShadow } from "../../styles/styles";
 
 export const StLandingSection = styled.div`

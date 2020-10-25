@@ -9,7 +9,6 @@ import {
   StIntroSection,
   StCopySection,
 } from "./styles";
-import responsiveLandingImage from "../../images/responsive-lotus.jpg";
 import snakeEye from "../../images/jivamukti-logo.svg";
 import { Container, Row, Col } from "react-bootstrap";
 
