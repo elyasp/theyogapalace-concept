@@ -1,8 +1,14 @@
 import React from "react";
+import { Container, Row, Col } from "react-bootstrap";
 
 export const ProductPage = () => {
   return (
     <>
+      <Container>
+        <Row>
+          <Col>1 of 1</Col>
+        </Row>
+      </Container>
       <h1>Mentorship series by Dr. G</h1>
       <h2>
         25 hrs Yoga Anatomy Training, Medically-Informed Yoga (MIY)

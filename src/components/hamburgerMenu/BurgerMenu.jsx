@@ -1,6 +1,6 @@
 import React from "react";
 import { StyledMenu } from "./styles";
-import { NavLink } from "../header/styles";
+import { StyledLink } from "../header/styles";
 import yogaLogo from "../../images/jivamukti-logo.svg";
 
 export const BurgerMenu = ({ open }) => {
@@ -8,10 +8,10 @@ export const BurgerMenu = ({ open }) => {
     <>
       <StyledMenu open={open}>
         <img src={yogaLogo} alt="jivamukti-logo.svg" />
-        <NavLink to="/">Home</NavLink>
-        <NavLink to="/programs">masterclass</NavLink>
-        <NavLink to="/about">Palacesophy</NavLink>
-        <NavLink to="/contact">APPLY NOW</NavLink>
+        <StyledLink to="/">Home</StyledLink>
+        <StyledLink to="/programs">masterclass</StyledLink>
+        <StyledLink to="/about">Palacesophy</StyledLink>
+        <StyledLink to="/contact">APPLY NOW</StyledLink>
       </StyledMenu>
     </>
   );
