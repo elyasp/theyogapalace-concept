@@ -1,14 +1,13 @@
 import React from "react";
 import {
-  Background,
-  Intro,
-  Title,
+  StLandingSection,
+  Hero,
   StyledTextLoop,
   StyledPromotion,
-  DescriptionComponent,
   SaleLink,
   PageImage,
-  StyledContainer,
+  StIntroSection,
+  StCopySection,
 } from "./styles";
 import responsiveLandingImage from "../../images/responsive-lotus.jpg";
 import snakeEye from "../../images/jivamukti-logo.svg";
@@ -17,9 +16,14 @@ import { Container, Row, Col } from "react-bootstrap";
 export const MainPage = () => {
   return (
     <>
-      <Background>
-        <Intro>
-          <h1>THE YOGA PALACE</h1>
+      <StLandingSection>
+        <Hero>
+          <h1>
+            <span>THE YOG</span>
+            <span>A PAL</span>
+            <span>ACE</span>
+          </h1>
+
           <StyledPromotion>
             <span>For yoga teachers who want to </span>
             <StyledTextLoop
@@ -33,15 +37,10 @@ export const MainPage = () => {
               <span>be a community ambassador for a safe yoga practise</span>
             </StyledTextLoop>
           </StyledPromotion>
-        </Intro>
-      </Background>
-      <StyledContainer>
+        </Hero>
+      </StLandingSection>
+      <StIntroSection>
         <Container>
-          <Row>
-            <Col>1 of 3</Col>
-            <Col>2 of 3</Col>
-            <Col>3 of 3</Col>
-          </Row>
           <Row>
             <Col md={true}>
               <PageImage src={snakeEye} alt="snake-meditation-logo" />
@@ -79,7 +78,38 @@ export const MainPage = () => {
             </Col>
           </Row>
         </Container>
-      </StyledContainer>
+      </StIntroSection>
+      <StCopySection>
+        <Container>
+          <Row>
+            <Col>
+              <h1>sample text and testimonials</h1>
+            </Col>
+          </Row>
+          <br />
+          <br />
+          <Row>
+            <Col md={true}>
+              TESTIMONIAL 1, Lorem ipsum dolor sit amet consectetur adipisicing
+              elit. Voluptatibus minima quae sapiente reiciendis maiores commodi
+              ex modi, odio molestiae esse corrupti provident illum aliquam
+              repudiandae ad nulla nam velit distinctio?
+            </Col>
+            <Col md={true}>
+              TEstimonial two, Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Voluptatibus minima quae sapiente reiciendis
+              maiores commodi ex modi, odio molestiae esse corrupti provident
+              illum aliquam repudiandae ad nulla nam velit distinctio?
+            </Col>
+            <Col md={true}>
+              testimonial three , Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Voluptatibus minima quae sapiente reiciendis
+              maiores commodi ex modi, odio molestiae esse corrupti provident
+              illum aliquam repudiandae ad nulla nam velit distinctio?
+            </Col>
+          </Row>
+        </Container>
+      </StCopySection>
     </>
   );
 };

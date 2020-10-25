@@ -1,64 +1,76 @@
 import styled from "styled-components";
 import TextLoop from "react-text-loop";
 import { Link } from "react-router-dom";
-import waveUp from "../../images/yoga.svg";
-import waveDown from "../../images/yogaUnder.svg";
+import waveUp from "../../images/waveUp.svg";
+import waveDown from "../../images/waveDown.svg";
 import responsiveLandingImage from "../../images/responsive-lotus.jpg";
 import { mediaUntil, mediaFrom, LayeredBoxShadow } from "../../styles/styles";
 
-export const Background = styled.div`
+export const StLandingSection = styled.div`
   display: flex;
   justify-content: center;
+  align-items: center;
   background-image: url(${waveUp});
   background-size: cover;
-  background-position: center;
+  background-position: right;
   background-repeat: no-repeat;
-  background-color: #005059;
+  background-color: #fff5f2;
   width: 100%;
-  height: 70vh;
-
-  /* box-shadow: 152px 12px 167px -46px rgba(0, 25, 28, 0.1) inset; */
-
-  /* ${mediaUntil.lg(`
-    background-image: url(${responsiveLandingImage});
-    box-shadow: 7px 77px 164px -47px rgba(5, 54, 60, 0.1) inset;
-
-  `)} */
+  height: 55vh;
 `;
 
-export const Intro = styled.div`
+export const Hero = styled.div`
+  padding: 3em;
   ${mediaUntil.md(`
+        
         height: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: space-around;
+        font-size: 1em;
 `)}
-  /* padding: 1em; */
-  /* width: 65vw; */
+  max-width: 70%;
 
   h1 {
-    font-weight: 600;
-    color: #fe9a84;
+    font-weight: 900;
+    font-family: "Avenir";
+    font-size: 5em;
+    color: white;
 
-    ${mediaFrom.md(`
-        font-size: 5em;
-    `)};
+    span {
+      :first-child {
+        color: #00282b;
+      }
+
+      &:nth-child(2) {
+        color: #005059;
+      }
+
+      :last-child {
+        color: #08808e;
+      }
+    }
   }
 `;
 
-export const StyledContainer = styled.section`
+export const StIntroSection = styled.section`
   background-image: url(${waveDown});
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+
+  * {
+    text-align: center;
+  }
 `;
 
-export const StyledTextLoop = styled(TextLoop)`
-  color: #fe9a84;
+export const StCopySection = styled.section`
+  padding: 2em;
 `;
-
 export const StyledPromotion = styled.div`
+  border-top: solid 2px black;
+  padding: 1em;
   span {
     :first-child {
       font-weight: 500;
@@ -70,6 +82,10 @@ export const StyledPromotion = styled.div`
 display: grid;
 place-items: center;
 `)}
+`;
+
+export const StyledTextLoop = styled(TextLoop)`
+  color: #005059;
 `;
 
 export const DescriptionComponent = styled.section`
@@ -116,8 +132,10 @@ export const DescriptionComponent = styled.section`
 `;
 
 export const SaleLink = styled(Link)`
+  ${LayeredBoxShadow}
+  border-radius: 10px;
   padding: 1em 2em;
-  background: #00a6ff;
+  background: #005059;
   width: fit-content;
   display: flex;
   align-items: center;
@@ -135,5 +153,9 @@ export const SaleLink = styled(Link)`
 `;
 
 export const PageImage = styled.img`
-  max-height: 700px;
+  max-height: 550px;
+
+  ${mediaUntil.md(`
+  max-height: 300px;
+  `)}
 `;

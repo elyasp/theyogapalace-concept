@@ -16,28 +16,9 @@ import {
 import yogaLogo from "../../images/openeyecon.svg";
 
 export const NavBar = () => {
-  // const [open, setOpen] = useState(false);
-  // const node = useRef();
-  // const [isScrolled, setIsScrolled] = useState(false);
-
-  // const handleScroll = () => {
-  //   if (window.pageYOffset > 5) {
-  //     setIsScrolled(true);
-  //   } else {
-  //     setIsScrolled(false);
-  //   }
-  // };
-
-  // useEffect(() => {
-  //   window.addEventListener("scroll", handleScroll);
-
-  //   return () => window.removeEventListener("scroll", handleScroll);
-  // });
-
-  // console.log(isScrolled);
-
   return (
     <>
+      <Banner>under construction | Something BIG is coming very soon</Banner>
       <Navbar
         collapseOnSelect
         expand="lg"
@@ -57,22 +38,24 @@ export const NavBar = () => {
             <StyledLink to="/programs">TYP Mentoring Series</StyledLink>
             <StyledLink to="/about">Palacesophy</StyledLink>
             <StyledDropdown
-              title="PAlace Dropdown"
+              title="Our Palacesophy"
               id="collasible-nav-dropdown"
             >
-              <StyledDropdown.Item href="#action/3.1">
-                Who is Dr. G?
-              </StyledDropdown.Item>
-              <StyledDropdown.Item href="#action/3.2">
-                Our Palace
-              </StyledDropdown.Item>
-              <StyledDropdown.Item href="#action/3.3">
-                Our Mission
-              </StyledDropdown.Item>
-              <StyledDropdown.Divider />
-              <StyledDropdown.Item href="#action/3.4">
-                <Link to="/contact">Apply Here</Link>
-              </StyledDropdown.Item>
+              <div>
+                <StyledDropdown.Item href="/about">
+                  Who is Dr. G?
+                </StyledDropdown.Item>
+                <StyledDropdown.Item href="/#action/3.3">
+                  Our Palace
+                </StyledDropdown.Item>
+                <StyledDropdown.Item href="#action/3.3">
+                  Our Mission
+                </StyledDropdown.Item>
+                <StyledDropdown.Divider />
+                <StyledDropdown.Item href="#action/3.4">
+                  <Link to="/contact">Apply Here</Link>
+                </StyledDropdown.Item>
+              </div>
             </StyledDropdown>
             <StyledLink to="/contact">APPLY NOW</StyledLink>
           </StyledNav>

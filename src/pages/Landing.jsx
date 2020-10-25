@@ -6,9 +6,9 @@ export const Landing = () => {
   return (
     <>
       <div>
-        {/* <Fade duration={2000}> */}
-        <MainPage />
-        {/* </Fade> */}
+        <Fade duration={2000}>
+          <MainPage />
+        </Fade>
       </div>
     </>
   );
