@@ -1,8 +1,29 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 import waveUp from "../../images/waveDown.svg";
 import { mediaUntil } from "../../styles/styles";
 
+export const PageWrap = styled.main`
+  background-color: antiquewhite;
+`;
+
+export const LightSection = styled.section`
+  min-width: 70%;
+  padding: 30px;
+  height: ${(props) => props.height || "fit-content"};
+  background-color: antiquewhite;
+`;
+
+export const DarkSection = styled.section`
+  height: ${(props) => props.height || "fit-content"};
+  min-width: 70%;
+  padding: 30px;
+  background-color: #202940;
+  color: white;
+`;
+
 export const StyledHeader = styled.header`
+  background-color: red;
   background: url(${waveUp});
   background-size: cover;
   background-position: right;
@@ -22,4 +43,8 @@ export const StyledHeader = styled.header`
     text-transform: uppercase;
     font-weight: 700;
   }
+`;
+
+export const StyledPromo = styled(Link)`
+  border-radius: 30px;
 `;

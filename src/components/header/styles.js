@@ -19,10 +19,28 @@ const slideIn = keyframes`
   }
 `;
 
+export const Banner = styled.div`
+  position: sticky;
+  display: grid;
+  place-items: center;
+  background: black;
+  color: white;
+  height: 2em;
+  letter-spacing: 0.7px;
+  width: 100%;
+  text-transform: uppercase;
+
+  ${mediaUntil.md(`
+     font-size: 0.6em;
+  `)}
+`;
+
 export const StyledNav = styled(Nav)`
   display: flex;
+  flex-direction: column;
   justify-content: flex-end;
   width: 100%;
+  /* top: 10px; */
 
   ${mediaUntil.md(`
     display: block;
@@ -116,19 +134,4 @@ export const BurgerWrap = styled.div`
   display: none;
   position: fixed;
   width: fit-content;
-`;
-
-export const Banner = styled.div`
-  display: grid;
-  place-items: center;
-  background: black;
-  color: white;
-  height: 2em;
-  letter-spacing: 0.7px;
-  width: 100%;
-  text-transform: uppercase;
-
-  ${mediaUntil.md(`
-     font-size: 0.6em;
-  `)}
 `;

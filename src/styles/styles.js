@@ -2,25 +2,11 @@ import styled, { createGlobalStyle, css } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
 
-@font-face {
-     font-family: 'AvenirBold';
-     src: url('../fonts/AvenirNextLTPro-Bold.woff') format('woff');
-  }
-@font-face {
-     font-family: 'AvenirItalics';
-     src: url('../fonts/AvenirNextLTPro-It.woff') format('woff');
-  }
-
-@font-face {
-     font-family: 'Avenir';
-     src: url('../fonts/AvenirNextLTPro-Regular.woff') format('woff');
-  }
-
   body {
     background-color: #fff5f2;
     overflow-x: hidden;
     margin: 0;
-    font-family: "Avenir", 'Segoe UI', 'Roboto', 'Oxygen',
+    font-family: "Quicksand", 'Segoe UI', 'Roboto', 'Oxygen',
         'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
         sans-serif;
     -webkit-font-smoothing: antialiased;

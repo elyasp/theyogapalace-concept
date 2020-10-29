@@ -36,15 +36,13 @@ export const NavBar = () => {
           <StyledNav className="mr-auto">
             <StyledLink to="/">Home</StyledLink>
             <StyledLink to="/programs">TYP Mentoring Series</StyledLink>
-            <StyledLink to="/about">Palacesophy</StyledLink>
+            <StyledLink to="/about">Meet Dr. G</StyledLink>
             <StyledDropdown
               title="Our Palacesophy"
               id="collasible-nav-dropdown"
             >
               <div>
-                <StyledDropdown.Item href="/about">
-                  Who is Dr. G?
-                </StyledDropdown.Item>
+                <StyledDropdown.Item href="/about"></StyledDropdown.Item>
                 <StyledDropdown.Item href="/#action/3.3">
                   Our Palace
                 </StyledDropdown.Item>
@@ -61,23 +59,6 @@ export const NavBar = () => {
           </StyledNav>
         </Navbar.Collapse>
       </Navbar>
-
-      {/* <Header isScrolled={isScrolled}>
-        <Banner>TRAINING PLATFORM COMING SOON!</Banner>
-        <BurgerMenu ref={node} open={open} setOpen={setOpen} />
-        <Nav>
-          <div>
-            <BurgerButton ref={node} open={open} setOpen={setOpen} />
-
-            <Link to="/">
-              <IconComponent>
-                <YogaLogo src={yogaLogo} alt="jivamukti-logo.svg" />
-              </IconComponent>
-            </Link>
-          </div>
-         
-        </Nav>
-      </Header> */}
     </>
   );
 };

@@ -8,6 +8,7 @@ import {
   PageImage,
   StIntroSection,
   StCopySection,
+  BlobParagraph,
 } from "./styles";
 import snakeEye from "../../images/jivamukti-logo.svg";
 import { Container, Row, Col } from "react-bootstrap";
@@ -45,7 +46,7 @@ export const MainPage = () => {
               <PageImage src={snakeEye} alt="snake-meditation-logo" />
             </Col>
             <Col md={true}>
-              <div>
+              <BlobParagraph>
                 <p>
                   The Yoga Palace, a community of creative minds and bhakti
                   hearts who want to reach their highest potential through
@@ -71,9 +72,8 @@ export const MainPage = () => {
                 <br />
 
                 <h1>Welcome to the Palace</h1>
-                <br />
-                <SaleLink to="programs">Check out our Masterclasses!</SaleLink>
-              </div>
+              </BlobParagraph>
+              <SaleLink to="programs">Check out our Masterclasses!</SaleLink>
             </Col>
           </Row>
         </Container>

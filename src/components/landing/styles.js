@@ -3,6 +3,7 @@ import TextLoop from "react-text-loop";
 import { Link } from "react-router-dom";
 import waveUp from "../../images/waveUp.svg";
 import waveDown from "../../images/waveDown.svg";
+import blob from "../../images/text-blob.svg";
 import { mediaUntil, mediaFrom, LayeredBoxShadow } from "../../styles/styles";
 
 export const StLandingSection = styled.div`
@@ -30,10 +31,12 @@ export const Hero = styled.div`
         font-size: 1em;
 `)}
   max-width: 70%;
+  background-color: antiquewhite;
+  /* border-radius: 3em; */
 
   h1 {
     font-weight: 900;
-    font-family: "Avenir";
+    font-family: "Raleway";
     font-size: 5em;
     color: white;
 
@@ -71,8 +74,9 @@ export const StyledPromotion = styled.div`
   border-top: solid 2px black;
   padding: 1em;
   span {
+    font-family: "Raleway";
     :first-child {
-      font-weight: 500;
+      font-weight: 300;
     }
     font-size: 1em;
   }
@@ -133,8 +137,9 @@ export const DescriptionComponent = styled.section`
 export const SaleLink = styled(Link)`
   ${LayeredBoxShadow}
   border-radius: 10px;
-  padding: 1em 2em;
-  background: #005059;
+  padding: 1em;
+  margin: 2em;
+  background: #943c29;
   width: fit-content;
   display: flex;
   align-items: center;
@@ -146,8 +151,10 @@ export const SaleLink = styled(Link)`
   letter-spacing: 1.2px;
 
   &:hover {
-    background: #0064de;
-    transition: all 0.5s ease;
+    background: #662a1d;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    color: white;
   }
 `;
 
@@ -157,4 +164,14 @@ export const PageImage = styled.img`
   ${mediaUntil.md(`
   max-height: 300px;
   `)}
+`;
+
+export const BlobParagraph = styled.div`
+  /* background-image: url(${blob}); */
+  background-color: #202940;
+  color: white;
+  padding: 4rem 1rem;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 `;
