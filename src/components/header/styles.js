@@ -1,6 +1,6 @@
 import styled, { css, keyframes } from "styled-components";
 import { Link } from "react-router-dom";
-import { mediaUntil, mediaFrom } from "../../styles/styles";
+import { mediaUntil, BoldHeading } from "../../styles/styles";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import { Nav, Navbar } from "react-bootstrap";
 
@@ -17,6 +17,10 @@ const slideIn = keyframes`
     transform: translateY(1rem);
     opacity: 0;
   }
+`;
+
+export const StyledNavbar = styled(Navbar)`
+  background-color: white;
 `;
 
 export const Banner = styled.div`

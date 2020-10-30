@@ -1,17 +1,14 @@
-import React, { useState, useRef, useEffect } from "react";
-import { Nav, Navbar } from "react-bootstrap";
-import { BurgerButton, BurgerMenu } from "../hamburgerMenu";
+import React from "react";
+import { Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import {
-  Header,
-  NavList,
   StyledLink,
   YogaLogo,
   IconComponent,
-  BurgerWrap,
   Banner,
   StyledDropdown,
   StyledNav,
+  StyledNavbar,
 } from "./styles";
 import yogaLogo from "../../images/openeyecon.svg";
 
@@ -19,11 +16,11 @@ export const NavBar = () => {
   return (
     <>
       <Banner>under construction | Something BIG is coming very soon</Banner>
-      <Navbar
+      <StyledNavbar
         collapseOnSelect
         expand="lg"
-        bg="light"
-        variant="light"
+        // bg="light"
+        // variant="light"
         sticky="top"
       >
         <Link to="/">
@@ -58,7 +55,7 @@ export const NavBar = () => {
             <StyledLink to="/contact">APPLY NOW</StyledLink>
           </StyledNav>
         </Navbar.Collapse>
-      </Navbar>
+      </StyledNavbar>
     </>
   );
 };

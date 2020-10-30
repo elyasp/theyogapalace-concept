@@ -58,3 +58,24 @@ export const LayeredBoxShadow = css`
     0 16px 16px rgba(0, 0, 0, 0.12), 0 32px 32px rgba(0, 0, 0, 0.12),
     0 64px 64px rgba(0, 0, 0, 0.12), 0 128px 128px rgba(0, 0, 0, 0.12);
 `;
+export const LayeredTextShadow = css`
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12),
+    0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12),
+    0 16px 16px rgba(0, 0, 0, 0.12), 0 32px 32px rgba(0, 0, 0, 0.12),
+    0 64px 64px rgba(0, 0, 0, 0.12), 0 128px 128px rgba(0, 0, 0, 0.12);
+`;
+
+export const BoldHeading = css`
+  font-family: "Raleway";
+  font-weight: 900;
+`;
+
+export const SubHeading = css`
+  font-family: "Raleway";
+  font-weight: 400;
+`;
+
+export const CopyText = css`
+  font-family: "Quicksand";
+  font-weight: 200;
+`;

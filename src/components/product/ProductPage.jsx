@@ -7,6 +7,7 @@ import {
   LightSection,
   DarkSection,
 } from "./styles";
+import { SaleLink } from "../landing/styles";
 
 export const ProductPage = () => {
   return (
@@ -14,22 +15,28 @@ export const ProductPage = () => {
       <PageWrap>
         <StyledHeader>
           <Container>
-            <Row>
-              <Col>
-                <h2>Mentoring series by Dr. G</h2>
-                <h4>STEP UP YOUR ASANA's AND GUIDE WITH CONFIDENCE</h4>
-                <span>
-                  A 6-Week Long Mentoring Program for Yoga Teachers and curious
-                  minds led by Gonzalo Santellan, MD, Sports Doctor and Yoga
-                  Teacher
-                </span>
-              </Col>
-            </Row>
+            <div>
+              <Row>
+                <Col>
+                  <h2>Get Mentored at the Yoga Palace</h2>
+                  <h4>& STEP UP YOUR ASANA's AND GUIDE WITH CONFIDENCE</h4>
+                  <span>
+                    A 6-Week Long Mentoring Program for Yoga Teachers and
+                    curious minds led by Gonzalo Santellan, MD, Sports Doctor
+                    and Yoga Teacher
+                  </span>
+                </Col>
+              </Row>
+            </div>
           </Container>
         </StyledHeader>
 
         <Container>
-          <StyledPromo>I want more info!</StyledPromo>
+          <Row>
+            <Col>
+              <SaleLink>ENROLL NOW!</SaleLink>
+            </Col>
+          </Row>
           <Row>
             <Col>
               <h5>
@@ -51,7 +58,7 @@ export const ProductPage = () => {
             </Col>
           </Row>
         </Container>
-        <LightSection height="70vh">
+        <LightSection>
           <Container>
             <Row>
               <Col>
@@ -69,7 +76,7 @@ export const ProductPage = () => {
             </Row>
           </Container>
         </LightSection>
-        <DarkSection height="70vh">
+        <DarkSection>
           <Container>
             <Row>
               <Col>

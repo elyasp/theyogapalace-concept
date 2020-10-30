@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import waveUp from "../../images/waveUp.svg";
 import waveDown from "../../images/waveDown.svg";
 import blob from "../../images/text-blob.svg";
-import { mediaUntil, mediaFrom, LayeredBoxShadow } from "../../styles/styles";
+import { mediaUntil, BoldHeading, LayeredBoxShadow } from "../../styles/styles";
 
 export const StLandingSection = styled.div`
   display: flex;
@@ -20,13 +20,14 @@ export const StLandingSection = styled.div`
 `;
 
 export const Hero = styled.div`
-  padding: 3em;
+  margin-bottom: 1rem;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   ${mediaUntil.md(`
         
         height: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
         justify-content: space-around;
         font-size: 1em;
 `)}
@@ -71,6 +72,7 @@ export const StCopySection = styled.section`
   padding: 2em;
 `;
 export const StyledPromotion = styled.div`
+  text-align: center;
   border-top: solid 2px black;
   padding: 1em;
   span {
@@ -82,13 +84,19 @@ export const StyledPromotion = styled.div`
   }
 
   ${mediaUntil.md(`
-display: grid;
-place-items: center;
+      display: grid;
+      place-items: center;
 `)}
 `;
 
 export const StyledTextLoop = styled(TextLoop)`
   color: #005059;
+
+  span {
+    ${mediaUntil.md(`
+       white-space: normal;
+`)}
+  }
 `;
 
 export const DescriptionComponent = styled.section`
@@ -136,17 +144,18 @@ export const DescriptionComponent = styled.section`
 
 export const SaleLink = styled(Link)`
   ${LayeredBoxShadow}
+  ${BoldHeading}
   border-radius: 10px;
   padding: 1em;
   margin: 2em;
   background: #943c29;
   width: fit-content;
-  display: flex;
-  align-items: center;
+  display: grid;
+  place-items: center;
   text-transform: uppercase;
   color: white;
   text-decoration: none;
-  font-weight: 600;
+
   font-size: 1.3em;
   letter-spacing: 1.2px;
 

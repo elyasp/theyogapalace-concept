@@ -1,17 +1,20 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import waveUp from "../../images/waveDown.svg";
-import { mediaUntil } from "../../styles/styles";
+import { mediaUntil, BoldHeading } from "../../styles/styles";
 
 export const PageWrap = styled.main`
   background-color: antiquewhite;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
 `;
 
 export const LightSection = styled.section`
   min-width: 70%;
   padding: 30px;
   height: ${(props) => props.height || "fit-content"};
-  background-color: antiquewhite;
+  /* background-color: antiquewhite; */
 `;
 
 export const DarkSection = styled.section`
@@ -23,25 +26,38 @@ export const DarkSection = styled.section`
 `;
 
 export const StyledHeader = styled.header`
-  background-color: red;
   background: url(${waveUp});
   background-size: cover;
-  background-position: right;
+  background-position: center;
   background-repeat: no-repeat;
-  padding: 2em;
-  width: 100%;
-  height: 400px;
+
+  height: fit-content;
   color: white;
 
   ${mediaUntil.md(`
-        padding: 1em;
+      padding: 1em;
   `)}
 
   h2 {
-    margin-top: 2em;
+    font-size: 4rem;
     text-align: center;
     text-transform: uppercase;
     font-weight: 700;
+
+    ${mediaUntil.md(`
+     font-size: 1rem;
+  `)}
+  }
+
+  div {
+    display: grid;
+    background-color: #202940;
+    place-items: center;
+    padding: 2rem;
+
+    ${mediaUntil.md(`
+     padding: 1rem;
+  `)}
   }
 `;
 
