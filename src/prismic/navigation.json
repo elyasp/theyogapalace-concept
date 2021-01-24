@@ -1,0 +1,44 @@
+{
+  "Main": {
+    "branding": {
+      "type": "Text",
+      "config": {
+        "label": "Branding",
+        "placeholder": "Branding"
+      }
+    },
+    "page_link": {
+      "type": "Link",
+      "config": {
+        "select": "document",
+        "customtypes": ["page"],
+        "label": "Page Link",
+        "placeholder": "Page Link"
+      }
+    },
+    "navigation_links": {
+      "type": "Group",
+      "config": {
+        "fields": {
+          "label": {
+            "type": "Text",
+            "config": {
+              "label": "Label",
+              "placeholder": "Label"
+            }
+          },
+          "link": {
+            "type": "Link",
+            "config": {
+              "select": "document",
+              "customtypes": ["page"],
+              "label": "Link",
+              "placeholder": "Link"
+            }
+          }
+        },
+        "label": "Navigation Links"
+      }
+    }
+  }
+}

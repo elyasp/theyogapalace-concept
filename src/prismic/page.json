@@ -1,0 +1,19 @@
+{
+  "Main": {
+    "uid": {
+      "type": "UID",
+      "config": {
+        "label": "Slug",
+        "placeholder": "slug"
+      }
+    },
+    "page_title": {
+      "type": "StructuredText",
+      "config": {
+        "single": "heading1",
+        "label": "Page Title",
+        "placeholder": "Title"
+      }
+    }
+  }
+}
